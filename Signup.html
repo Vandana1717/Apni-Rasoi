@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apni Rasoi | Signup</title>
+    <link rel="stylesheet" href="stylesignup.css">
+    <style>
+        a:hover{
+            background-color: rgb(166, 201, 11);
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Welcome Foodie </h1>
+        <img src="logo.jfif" alt="not available" height="150">
+    </header>
+    <nav>
+        
+        <a href="Signup.html" >SIGN UP</a>
+        <a href="login.html" target="_blank">LOG IN</a>
+        <a href="foodmenu.html" target="_blank">FOOD MENU </a>
+        <a href="HomePage.html" target="_blank">HOME</a>
+     </nav>
+     <main>
+         <section>
+            
+                <form action ="Signup.php" method="POST">
+                    <img src="spaghetti-1932466__340.jpg" alt="not available" width="1500" height="700"  style="filter: opacity(50%)">
+                    
+                    <div class="container">
+                        
+                    <label for="name">FirstName</label><br>
+                <input type="text" name="name" required><br>
+                <label for="lname">LastName</label><br>
+                <input type="text" name="lname" >
+                <br>
+                <label for="hname">Hostel</label><br>
+                <input type="text" name="hname" required>
+                <br>
+                <label for="num">PhoneNumber</label><br>
+                <input type="text" name="num" required>
+                <br>
+                <label for="id">Email-id</label><br>
+                <input type="text" name="id" required >
+                <br>
+                <label for="uname">UserName</label><br>
+                <input type="text" name="uname" required>
+                <br>
+                <label for="pass">Password</label><br>
+                <input type="password" name="pass" required>
+                <br>
+                <label for="passw">Confirm Password</label><br>
+                <input type="password" name="passw" required>
+                <br>
+                <label for="que" >Security Question</label><br>
+                 <select name="Question" id="Question" required>
+                         <option value="">None</option>
+                        <option value="What is your birth place ?">What is your birth place ?</option>
+                        <option value="What is your first school name ?">What is your first school name ?</option>
+                        <option value="What is your favourite dish ?">What is your favourite dish ?</option>
+                        <option value="What is your pet name ?">What is your pet name ? </option>
+                </select>
+                <br>
+                <label for="ans">Answer</label><br>
+                <input type="text" name="ans" required ><br>
+                <br>
+                <button type="submit" name="submit">SignUp</button>
+                <p style="font-size: 15px;font-weight: bolder;">Already a user? <a style="color: rgb(79, 8, 245);" href="login.html"> <b>Log in</b> </a> </p>
+            </form>
+            </div>
+         </section>
+     </main>
+     <footer>
+        <a href="faq.html">FAQ</a>
+        <a href="Contactus.html">Contact Us</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">&copy; 2021 | Banasthali Canteen</a>
+     </footer>
+</body>
+
+</html>
+

@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+    font-weight: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:red;
+}
+.wrapper{
+    width: 705px;
+    margin: 20px auto;
+    padding: 20px;
+}
+h1{
+    display: inline block;
+    background-color: cornsilk;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding:4px 20px;
+    float: left;
+    color: #ff7720;
+    border-radius: 50px;
+}
+.clear{
+    clear: both;
+}
+.pizza{
+    display: block;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.PIZZA{
+    background-color: white;
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 205px;
+    padding: 10px;
+}
+
+h2{
+    font-size: 12px;
+    display: block;
+    border: 1p solid #ccc;
+    margin: 0 0 10px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px dashed black;
+}
+
+span{
+    float: right;
+    text-shadow: blanchedalmond;
+    color: chocolate;
+}
+select{
+    color: green;
+}
+p{
+    font-size: 14px;
+    color: rgb(197, 141, 148);
+}

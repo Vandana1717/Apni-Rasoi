@@ -1,0 +1,289 @@
+<?php
+ 
+require('connect.inc.php');
+require('functions.inc.php');
+if(isset($_GET['id']) && $_GET['id']!=''){
+	$cat_id=mysqli_real_escape_string($con,$_GET['id']);
+	if($cat_id>0){
+		$get_product=get_product($con,'',$cat_id);
+	}else{
+		?>
+		<script>
+		window.location.href='Home.php';
+		</script>
+		<?php
+	}
+}else{
+	?>
+	<script>
+	window.location.href='Home.php';
+	</script>
+	<?php
+}										
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDER INDIAN FOOD..!!</title>
+    <link rel="stylesheet" href="stylerestaurant.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">
+            <h4><span>Find Refreshment here..!!!</span></h4>
+        </div>
+        <div class="menu">
+            <div class="single-menu">
+                <?php if(count($get_product)>0){?>
+                    
+                            <!-- Start Product View -->
+                            
+                                        <?php
+										foreach($get_product as $list){
+										?>
+										<!-- Start Single Category -->
+										<div class="col-md-4 col-lg-3 col-sm-4 col-xs-12">
+											<div class="category">
+												<div class="ht__cat__thumb">
+													<a href="product.php?id=<?php echo $list['id']?>">
+														<img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>" alt="product images">
+													</a>
+												</div>
+												
+												<div class="fr__product__inner">
+													<h4><a href="product-details.html"><?php echo $list['name']?></a></h4>
+													<ul class="fr__pro__prize">
+														<li class="old__prize"><?php echo $list['quantity']?></li>
+														<li><?php echo $list['price']?></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<?php } ?>
+                                    </div>
+							   </div>
+                            </div>
+                        </div>
+                    </div>
+					<?php } else { 
+						echo "Data not found";
+					} ?>
+                
+				</div>
+            </div>
+        </section>
+      
+                <img src="tea.jpeg" alt="">
+                <div class="menu-content">
+                    <h4>Chai/Tea<span> Rs95</span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="irish_coffee.jpg" alt="">
+                <div class="menu-content">
+                    <h4>Irish coffee<span> Rs35</span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="hott_choco.jpeg" alt="">
+                <div class="menu-content">
+                    <h4>Hot chocolate Milkshake<span> Rs80</span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="Strawberry milkshake.jpg" alt="">
+                <div class="menu-content">
+                    <h4>Strawberry Milkshake<span> Rs50</span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="orange_juice_11.jpg" alt="">
+                <div class="menu-content">
+                    <h4>Orange Juice <span> Rs60</span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="lassi.jpg" alt="">
+                <div class="menu-content">
+                    <h4>Lassi<span> Rs70</span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="mango-faluda-recipe.jpg" alt="">
+                <div class="menu-content">
+                    <h4>Mango Falooda <span> Rs50</span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="oreo_milk.jpg" alt="">
+                <div class="menu-content">
+                    <h4>Oreo Milkshake<span>Rs70</span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="cold-coffee-with-ice-cream.jpg" alt="">
+                <div class="menu-content">
+                    <h4>Cold coffee with ice-cream <span>Rs78</span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="vanilla_milk.jpg" alt="">
+                <div class="menu-content">
+                    <h4>Vanilla Milkshake<span>Rs89</span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="smores-milkshakes-580x875.jpg" alt="">
+                <div class="menu-content">
+                    <h4>S'mores Milkshake<span></span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="chocolate-peanut-butter-milkshake-6-700px-1.jpg" alt="">
+                <div class="menu-content">
+                    <h4>Peanut Butter-Brownie milkshake <span></span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="fruity-pebbles-milkshake-1.jpg" alt="">
+                <div class="menu-content">
+                    <h4>Fruity Pebble Milkshake<span></span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="soft-drinks-250x250.jpg" alt="">
+                <div class="menu-content">
+                    <h4>Masala Cold-Dirnks<span></span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="Bourbon Milk Punch 19.jpg" alt="">
+                <div class="menu-content">
+                    <h4>Bourbon Milk Punch<span>Rs40</span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="mogito.jpg" alt="">
+                <div class="menu-content">
+                    <h4>Mogito<span>Rs 70</span></h4>
+                    <div id="field1">Add/Remove
+                        <button type="button" id="sub" class="sub">-</button>
+                        <input type="number" id="1" value="1" min="1" max="3"/>
+                        <button type="button" id="add" class="add">+</button>
+                        <input type="submit" value="Order" id="submit">
+                    </div>
+                    <script src="rest.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

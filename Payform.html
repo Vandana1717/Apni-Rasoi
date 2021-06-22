@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment form</title>
+    <link rel="stylesheet" href="stylepay.css">
+</head>
+<body>
+    <div class="container">
+    <form action="" method="POST">
+        <h1 class="main_heading">Payment Form</h1>
+        <h2>User Information</h2>
+        
+        <p>Name: * <input type="text" name="name" placeholder="Enter Your Name" required></p>
+        <fieldset>
+        <legend>Gender *</legend>
+        <p>
+             
+             Male <input type="radio" name="gender" required>
+             Female <input type="radio" name="gender" required>
+             Others <input type="radio" name="gender" required>
+         </p>
+        </fieldset>
+         <p>
+             Address:<textarea name="address " placeholder="Enter your Address" cols="30" rows="5"></textarea>
+         </p>
+         <p>
+             Email: *<input type="email" name="email" placeholder="abc@gmail.com" required>
+         </p>
+         <p>
+             Pincode:<input type="number" name="pincode" placeholder="123456">
+         </p>
+         <h2>Payment Information</h2>
+         <p>
+             <select name="cardtype">
+                 <option value="">--Select a Card Type--</option>
+                 <option value="visa">Visa</option>
+                 <option value="rupay">Rupay</option>
+                 <option value="master card">Master Card</option>
+             </select>
+         </p>
+         <p>
+             Card Number * <input type="number" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+         </p>
+         <p>
+             Expiry Date * <input type="date" name="expdate" required>
+         </p>
+         <p>
+             Cvv *<input type="password" name="cvv" placeholder="123" required>
+         </p>
+         <p>
+             <input type="submit" value="PayNow">
+         </p>
+        
+
+    </form>
+</div>
+</body>
+</html>
